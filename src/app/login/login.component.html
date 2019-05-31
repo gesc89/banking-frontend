@@ -1,0 +1,17 @@
+<div class="hello">
+        <h1>Willkommen!</h1>
+</div>
+
+<div class="login">
+    <mat-form-field [formGroup] ="loginForm">
+    <input matInput formControlName= "id" placeholder="Benutzername">
+    </mat-form-field>
+    <br>
+    <br>
+    <mat-form-field [formGroup] ="loginForm">
+    <input matInput formControlName="password" placeholder="Passwort">
+    </mat-form-field>
+    <br>
+    <br>
+    <button mat-button (click)="login()">Login</button>
+</div>

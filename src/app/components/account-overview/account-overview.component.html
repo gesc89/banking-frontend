@@ -1,0 +1,60 @@
+<div *ngIf = "isLoggedIn; else loggedOut">
+
+    <h2>Umsätze einsehen</h2>
+    <br>
+
+<app-choose-account></app-choose-account>
+
+<div class = "overview">
+<div *ngIf = "revenues">
+<mat-table mat-table [dataSource]="revenues">
+
+    <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef>Datum</mat-header-cell>
+        <mat-cell *matCellDef="let revenue"> {{revenue.date | date: 'dd/MM/yyyy'}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="receiverAccount">
+        <mat-header-cell *matHeaderCellDef>Empfängerkonto</mat-header-cell>
+        <mat-cell *matCellDef="let revenue"> {{revenue.receiverAccountId}} </mat-cell>
+          </ng-container>
+
+           <ng-container matColumnDef="usage">
+        <mat-header-cell *matHeaderCellDef>Verwendungszweck</mat-header-cell>
+        <mat-cell *matCellDef="let revenue"> {{revenue.usage}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="transfererAccount">
+        <mat-header-cell *matHeaderCellDef>Ausgangskonto</mat-header-cell>
+        <mat-cell *matCellDef="let revenue"> {{revenue.transfererAccountId}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="value">
+        <mat-header-cell *matHeaderCellDef>Betrag (EUR)</mat-header-cell>
+        <mat-cell *matCellDef="let revenue"> {{revenue.value | number}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="accountingStatus">
+            <mat-header-cell *matHeaderCellDef>Buchung</mat-header-cell>
+            <mat-cell *matCellDef="let revenue"> {{revenue.accountingStatus}} </mat-cell>
+        </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+</mat-table>
+
+</div>
+
+<br>
+Saldo (EUR): {{accountBalance | number}} {{globalAccountingStatus}}        
+</div>
+<button mat-button class="refreshButton" (click)="refresh()">Aktualisieren</button>
+
+</div>
+
+<ng-template #loggedOut>
+
+    <h1>Bitte einloggen oder registrieren!</h1>
+
+</ng-template>

@@ -1,0 +1,46 @@
+.deleteLogin {
+
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    width: 50%;
+
+}
+
+.deleteLoginButton {
+
+    position: absolute;
+    right: 450px;
+    top: 200px;
+    width: 15%;
+
+
+}
+
+.updateCustomer{
+
+    position: absolute;
+    right: 500px;
+    top: 100px;
+    width: 50%;
+
+
+}
+
+.updatePostalcode{
+
+    position: absolute;
+    right: 500px;
+    top: 450px;
+    width: 50%;
+
+}
+
+.updateButton{
+
+    position: absolute;
+    right: 950px;
+    top: 650px;
+    width: 15%;
+
+}

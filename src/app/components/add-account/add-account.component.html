@@ -1,0 +1,21 @@
+<h2>Konten hinzufügen oder löschen</h2>
+<br>
+<h5>gültiges IBAN-Format: DExx-xxxx-xxxx-xxxx-xxxx-xx</h5>
+<div class="addAccount">
+    <mat-form-field [formGroup]="addAccountForm">
+        <input matInput formControlName = "accountId" placeholder="IBAN...">
+        <mat-error *ngIf ="addAccountForm.invalid">Die IBAN hat ein ungültiges Format</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field [formGroup]="addAccountForm">
+        <input matInput formControlName = "customerId" placeholder="Kundennummer...">
+    </mat-form-field>
+</div>
+<button mat-button class="addButton" (click) = "addAccount()">Konto erstellen</button>
+
+<div class="deleteAccount">
+        <mat-form-field [formGroup]="addAccountForm">
+            <input matInput formControlName = "accountId" placeholder="IBAN...">
+        </mat-form-field>
+    </div>
+        <button mat-button class="deleteButton" (click) = "deleteAccount()">Konto löschen</button>

@@ -1,0 +1,45 @@
+<div class="deleteLogin">
+    <mat-form-field>
+        <input matInput type="text" [(ngModel)]="loginId" placeholder="Benutzerkonto...">
+    </mat-form-field>
+</div>
+<br>
+<button mat-button class="deleteLoginButton" (click)="deleteLogin()">Benutzerkonto löschen</button>
+
+<div class="updateCustomer">
+    <mat-form-field [formGroup]="customerForm">
+        <input matInput formControlName="customer_id" placeholder="Kundennummer..." />
+    </mat-form-field>
+    <br>
+    <mat-form-field [formGroup]="customerForm">
+        <input matInput formControlName="firstname" placeholder="Vorname..." />
+    </mat-form-field>
+    <br>
+    <mat-form-field [formGroup]="customerForm">
+        <input matInput formControlName="lastname" placeholder="Nachname..." />
+    </mat-form-field>
+    <br>
+    <mat-form-field [formGroup]="customerForm">
+        <input matInput formControlName="adressStreet" placeholder="Straße......" />
+    </mat-form-field>
+    <br>
+    <mat-form-field [formGroup]="customerForm">
+        <input matInput formControlName="adressHouse" placeholder="Hausnummer..." />
+    </mat-form-field>
+</div>
+
+<div class="updatePostalcode">
+    <mat-form-field [formGroup]="postalcodeForm">
+        <input matInput formControlName="zipcode" placeholder="PLZ..." />
+    </mat-form-field>
+    <br>
+    <mat-form-field [formGroup]="postalcodeForm">
+        <input matInput formControlName="city" placeholder="Ort..." />
+    </mat-form-field>
+    <br>
+    <mat-form-field [formGroup]="postalcodeForm">
+        <input matInput formControlName="country" placeholder="Land..." />
+    </mat-form-field>
+    <br>
+</div>
+<button mat-button class="updateButton" (click)="updateFormCustomer()">Daten ändern</button>

@@ -1,0 +1,17 @@
+.updateAdress {
+
+    position: absolute;
+    right: 150px;
+    top: 300px;
+    width: 50%;
+
+}
+
+.updateButton {
+
+    position: absolute;
+    right: 400px;
+    top: 300px;
+    width: 10%;
+
+}

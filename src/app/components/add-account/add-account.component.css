@@ -1,0 +1,37 @@
+.addAccount{
+
+    position: absolute;
+    right: 270px;
+    top: 150px;
+    width: 50%;
+
+}
+
+.addButton{
+
+
+    position: absolute;
+    right: 750px;
+    top: 300px;
+    width: 10%;
+
+}
+
+.deleteAccount{
+
+    position: absolute;
+    right: 50px;
+    top: 150px;
+    width: 50%;
+
+}
+
+.deleteButton{
+
+
+    position: absolute;
+    right: 550px;
+    top: 300px;
+    width: 10%;
+
+}

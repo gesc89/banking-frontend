@@ -1,0 +1,20 @@
+<div class = "choose">
+<form>
+        <mat-form-field>
+           <mat-select placeholder = "Kontenauswahl" (ngModelChange)= "sendAccount()" [(ngModel)] = "chosenAccount" name = "account">
+              <mat-option *ngFor = "let account of accounts" 
+                 [value] = "account">
+                 {{account.id}}
+              </mat-option>
+           </mat-select>
+        </mat-form-field>
+        <div *ngIf = "chosenAccount">
+        <p> Ihr Konto: {{chosenAccount.id}} </p>
+      </div> 
+     </form>
+     <br>
+     <button class="chooseButton" mat-button (click) = "sendAccount()">Konto auswählen</button>
+   </div>
+   
+
+ 

@@ -1,0 +1,31 @@
+<div *ngIf = "isLoggedIn; else loggedOut">
+    <h2>Überweisungen vornehmen</h2>
+    <br>
+    <app-choose-account></app-choose-account>
+    <br>
+    <div class ="transfer">
+    <mat-form-field [formGroup] ="revenueForm">
+    <input matInput formControlName = "value" placeholder="Betrag...">
+    <mat-error *ngIf ="revenueForm.invalid">Ungültiger Betrag</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field [formGroup] ="revenueForm">
+    <input matInput formControlName = "usage" placeholder="Verwendungszweck...">
+    </mat-form-field>
+    <br>
+    <mat-form-field [formGroup] ="revenueForm">
+    <input matInput formControlName = "otherAccountId" placeholder="IBAN Empfänger...">
+    <mat-error *ngIf ="revenueForm.invalid">gültiges IBAN-Format: DExx-xxxx-xxxx-xxxx-xxxx-xx</mat-error>
+    </mat-form-field>
+    <br>
+    <br>
+    <br>
+    <button mat-button (click) ="transferMoney()">Bestätigen</button>
+    </div>
+</div>
+
+<ng-template #loggedOut>
+
+    <h1>Bitte einloggen oder registrieren!</h1>
+
+</ng-template>

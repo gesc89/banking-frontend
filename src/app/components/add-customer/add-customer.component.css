@@ -1,0 +1,37 @@
+.addLogin{
+
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    width: 50%;
+
+
+}
+
+.addCustomer{
+
+    position: absolute;
+    right: 400px;
+    top: 100px;
+    width: 50%;
+
+
+}
+
+.addPostalcode{
+
+    position: absolute;
+    right: 200px;
+    top: 100px;
+    width: 50%;
+
+}
+
+.addButton{
+
+    position: absolute;
+    right: 400px;
+    top: 210px;
+    width: 50%;
+
+}

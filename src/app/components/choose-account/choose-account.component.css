@@ -1,0 +1,17 @@
+.choose{
+
+    position: absolute;
+    right: 0px;
+    top: 70px;
+    width: 80%;
+
+}
+
+.chooseButton{
+
+    position: absolute;
+    right: 600px;
+    top: 10px;
+    width: 20%;
+
+}
